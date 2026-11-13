@@ -1,7 +1,7 @@
-"""AurumDrive entry point. Run with:  streamlit run app.py"""
+"""RecycleDrive entry point. Run with:  streamlit run app.py"""
 import streamlit as st
 
-st.set_page_config(page_title="AurumDrive", page_icon="🚗", layout="wide")  # must be first
+st.set_page_config(page_title="RecycleDrive", page_icon="🚗", layout="wide")  # must be first
 
 import pages_ui as ui  # noqa: E402
 from theme import inject_css  # noqa: E402

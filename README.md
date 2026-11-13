@@ -54,7 +54,7 @@ Total: 86 rules
 2. System Architecture
 
 ┌─────────────────────────────────────────────────────────────┐
-│                    AURUMDRIVE SYSTEM                        │
+│                    RecycleDrive SYSTEM                        │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
@@ -917,7 +917,7 @@ Select your repository: Supl3x/Car-Expert-System
 Branch: main
 Main file path: 
 app.py
-App URL: aurumdrive-car-expert (or your choice)
+App URL: RecycleDrive-car-expert (or your choice)
 5. Advanced Settings (Optional)
 
 
@@ -929,7 +929,7 @@ Wait 2-5 minutes for build.
 7. Get Your Live URL
 
 
-https://aurumdrive-car-expert.streamlit.app
+https://RecycleDrive-car-expert.streamlit.app
 Post-Deployment
 Test from different device:
 
@@ -1050,7 +1050,7 @@ Key code:
 python
 
 import streamlit as st
-st.set_page_config(page_title="AurumDrive", page_icon="🚗", layout="wide")
+st.set_page_config(page_title="RecycleDrive", page_icon="🚗", layout="wide")
 
 import pages_ui as ui
 from theme import inject_css
@@ -1297,7 +1297,7 @@ Responsibilities:
 - Extract code snippets from source files
 - Document architecture and rule table
 
-Output: docs/AurumDrive_Code_Explanation.pdf
+Output: docs/RecycleDrive_Code_Explanation.pdf
 
 Sections:
 1. Title page with course info
@@ -1622,7 +1622,7 @@ This demonstrates:
 System Limitations
 
 ┌────────────────────────────────────────────────────────┐
-│ WHAT AURUMDRIVE DOES                                   │
+│ WHAT RecycleDrive DOES                                   │
 ├────────────────────────────────────────────────────────┤
 │ ✅ Applies explicit IF-THEN rules to your answers     │
 │ ✅ Identifies red flags and reassuring signs          │
@@ -1632,7 +1632,7 @@ System Limitations
 └────────────────────────────────────────────────────────┘
 
 ┌────────────────────────────────────────────────────────┐
-│ WHAT AURUMDRIVE DOES NOT DO                            │
+│ WHAT RecycleDrive DOES NOT DO                            │
 ├────────────────────────────────────────────────────────┤
 │ ❌ Inspect the car physically                         │
 │ ❌ Verify documents with authorities                  │
@@ -1645,7 +1645,7 @@ System Limitations
 Official Disclaimer
 Displayed in the UI and PDF reports:
 
-AurumDrive gives preliminary guidance only based on the answers you provide. It cannot replace a professional mechanic's inspection or legal and registration verification of the vehicle's documents.
+RecycleDrive gives preliminary guidance only based on the answers you provide. It cannot replace a professional mechanic's inspection or legal and registration verification of the vehicle's documents.
 
 Unknown Handling Philosophy
 
@@ -1735,7 +1735,7 @@ Course requirement: Project specification required rule-based system
 Q3: What is forward chaining and why did you use it?
 A: Forward chaining is a data-driven reasoning method that starts with known facts and applies rules to infer new facts until a goal is reached or no more rules fire.
 
-Why forward chaining for AurumDrive:
+Why forward chaining for RecycleDrive:
 
 We gather many facts upfront (questionnaire)
 We want to discover ALL problems, not test one hypothesis
@@ -2171,7 +2171,7 @@ Key insight: Simple, transparent systems can be more valuable than complex ML mo
 5-Minute Viva Demo Script
 
 [0:00] INTRODUCTION
-"Hello, this is AurumDrive, a rule-based expert system for evaluating
+"Hello, this is RecycleDrive, a rule-based expert system for evaluating
 used cars in Pakistan before purchase. It has 86 explicit IF-THEN rules
 covering engine, transmission, documents, and 9 other categories."
 

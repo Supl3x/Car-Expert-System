@@ -1,4 +1,4 @@
-"""Builds docs/AurumDrive_Code_Explanation.pdf.  Run from the project root:  python build_docs_pdf.py"""
+"""Builds docs/RecycleDrive_Code_Explanation.pdf.  Run from the project root:  python build_docs_pdf.py"""
 import inspect
 import os
 from datetime import datetime
@@ -20,7 +20,7 @@ from report_generator import safe
 from vehicle_data import DEFAULT_FORM, normalize_vehicle
 
 GOLD, DARK, BRONZE = colors.HexColor("#D4AF37"), colors.HexColor("#0B0B0F"), colors.HexColor("#8C6B1F")
-OUT = os.path.join("docs", "AurumDrive_Code_Explanation.pdf")
+OUT = os.path.join("docs", "RecycleDrive_Code_Explanation.pdf")
 
 base = getSampleStyleSheet()["Normal"]
 body = ParagraphStyle("b", parent=base, fontSize=10, leading=14)
@@ -42,7 +42,7 @@ def C(text):
 story = []
 
 # 1. Title page
-band = Table([[Paragraph("AurumDrive", ParagraphStyle("t", fontName="Helvetica-Bold", fontSize=30, textColor=GOLD, leading=34))],
+band = Table([[Paragraph("RecycleDrive", ParagraphStyle("t", fontName="Helvetica-Bold", fontSize=30, textColor=GOLD, leading=34))],
               [Paragraph("Pakistan Used-Car Verdict System - Code Explanation", ParagraphStyle("t2", fontName="Helvetica", fontSize=13, textColor=colors.white))]],
              colWidths=[180 * mm])
 band.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), DARK), ("TOPPADDING", (0, 0), (-1, -1), 14), ("BOTTOMPADDING", (0, 0), (-1, -1), 14), ("LEFTPADDING", (0, 0), (-1, -1), 16)]))
@@ -56,7 +56,7 @@ story += [band, Spacer(1, 20),
 story += [P("1. Problem statement and niche", h1),
           P("Buying a used car in Pakistan is risky: odometer tampering, flood-damaged imports, swapped engines, "
             "unverified registration and transfer papers, and pressure from sellers are common. Most buyers are "
-            "not mechanics. AurumDrive is an expert system that captures the reasoning of an experienced inspector "
+            "not mechanics. RecycleDrive is an expert system that captures the reasoning of an experienced inspector "
             "as explicit IF-THEN rules and explains every conclusion. It also works as a decision support system: "
             "it makes a recommendation, but the buyer makes the final decision. The niche is Pakistan-specific: "
             "registration book or smart card checks, token tax dues, ownership transfer papers, and customs "
@@ -189,5 +189,5 @@ story += [P("11. Testing", h1),
 
 os.makedirs("docs", exist_ok=True)
 SimpleDocTemplate(OUT, pagesize=A4, leftMargin=15 * mm, rightMargin=15 * mm, topMargin=15 * mm,
-                  bottomMargin=15 * mm, title="AurumDrive Code Explanation").build(story)
+                  bottomMargin=15 * mm, title="RecycleDrive Code Explanation").build(story)
 print("Created", OUT)

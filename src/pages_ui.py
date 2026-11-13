@@ -131,10 +131,10 @@ def need_result():
 # ------------------------------------------------------------------ pages
 def page_home():
     st.markdown(
-        '<div class="aw-hero"><h1>AurumDrive</h1>'
+        '<div class="aw-hero"><h1>RecycleDrive</h1>'
         '<div class="tag">The Golden Standard in Used-Car Verdicts</div>'
         '<p>A rule-based expert system for the Pakistani used-car market. Answer a guided '
-        'inspection questionnaire and AurumDrive applies a knowledge base of explicit IF-THEN rules '
+        'inspection questionnaire and RecycleDrive applies a knowledge base of explicit IF-THEN rules '
         'to give a transparent, explainable verdict before you pay.</p></div>', unsafe_allow_html=True)
 
     c = st.columns(4)
@@ -143,7 +143,7 @@ def page_home():
     c[2].metric("Inspection questions", len(QUESTIONS))
     c[3].metric("Verdict levels", len(VERDICTS))
 
-    st.subheader("How AurumDrive Thinks")
+    st.subheader("How RecycleDrive Thinks")
     cols = st.columns(4)
     cards = [("1. Facts", "Your answers are stored as facts. Unknown stays unknown, never good or bad."),
              ("2. Rules", "Every rule is an explicit IF-THEN with a severity and an explanation."),
@@ -220,7 +220,7 @@ def page_vehicle():
 
         seed("v_price", int(form["price"]))
         form["price"] = st.number_input("Asking price (PKR)", min_value=0, step=50000, key="v_price",
-                                        help="Only used for a reminder. AurumDrive never estimates market value.")
+                                        help="Only used for a reminder. RecycleDrive never estimates market value.")
         seed("v_imported", form["imported"])
         form["imported"] = st.radio("Is the car imported?", IMPORTED, key="v_imported", horizontal=True,
                                     help="Unlocks the customs and auction-sheet questions.")
@@ -299,7 +299,7 @@ def page_results():
 
     st.info("Price reminder: compare the asking price"
             + (f" (PKR {v['price']:,})" if v["price"] else "")
-            + " with several current listings of similar cars. AurumDrive does not estimate market value.")
+            + " with several current listings of similar cars. RecycleDrive does not estimate market value.")
     st.caption(DISCLAIMER)
     nav_bar("res", back_to="Inspection", back_label="← Back to Inspection",
             next_label="View Reasoning →", next_args=("Reasoning",))
@@ -372,7 +372,7 @@ def page_report():
                 "with explanations, the forward-chaining trace, next steps and the disclaimer.")
     try:
         pdf = build_report(v, res)
-        name = f"AurumDrive_Report_{v['make']}_{v['model']}".replace(" ", "_")
+        name = f"RecycleDrive_Report_{v['make']}_{v['model']}".replace(" ", "_")
         st.download_button("Download PDF Report", data=pdf, file_name=f"{name}.pdf",
                            mime="application/pdf", key="rep_download")
     except Exception as exc:  # never show a raw traceback to the user
@@ -383,9 +383,9 @@ def page_report():
 
 
 def page_about():
-    st.title("About AurumDrive")
+    st.title("About RecycleDrive")
     st.markdown(
-        "AurumDrive is a university AI project: a **rule-based expert system** with a knowledge base, an "
+        "RecycleDrive is a university AI project: a **rule-based expert system** with a knowledge base, an "
         "inference engine using **forward chaining**, a **decision tree** for the final verdict, and an "
         "explanation facility. It uses no machine learning and no external AI services.\n\n"
         "**Limitations:** it only reasons over what you tell it, it does not know market prices, and "

@@ -86,7 +86,7 @@ def inject_css():
 
 
 def logo_html():
-    return ('<div class="aw-logo"><b>AURUM</b><span>DRIVE</span> 🚗</div>'
+    return ('<div class="aw-logo"><b>Recycle</b><span>DRIVE</span> 🚗</div>'
             '<div class="aw-sub">Know the car before you pay for it.</div>')
 
 

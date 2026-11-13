@@ -29,7 +29,7 @@ def safe(text):
 def build_report(vehicle, result):
     buf = io.BytesIO()
     doc = SimpleDocTemplate(buf, pagesize=A4, leftMargin=15 * mm, rightMargin=15 * mm,
-                            topMargin=15 * mm, bottomMargin=15 * mm, title="AurumDrive Report")
+                            topMargin=15 * mm, bottomMargin=15 * mm, title="RecycleDrive Report")
     base = getSampleStyleSheet()["Normal"]
     body = ParagraphStyle("body", parent=base, fontSize=9, leading=12)
     small = ParagraphStyle("small", parent=body, fontSize=8, leading=10)
@@ -43,7 +43,7 @@ def build_report(vehicle, result):
         return Paragraph(safe(t), s)
 
     story = []
-    band = Table([[P("AurumDrive - Vehicle Evaluation Report", title)],
+    band = Table([[P("RecycleDrive - Vehicle Evaluation Report", title)],
                   [P("Know the car before you pay for it.  |  " + datetime.now().strftime("%d %b %Y, %H:%M"), tagline)]],
                  colWidths=[180 * mm])
     band.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), DARK), ("LEFTPADDING", (0, 0), (-1, -1), 12),
