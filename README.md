@@ -5,7 +5,7 @@
 **RecycleDrive: The Golden Standard in Used-Car Verdicts**  
 *Tagline: "Know the car before you pay for it."*
 
-RecycleDrive is a rule-based expert system designed to help buyers evaluate second-hand cars in the Pakistani market before making a purchase decision. It provides transparent, explainable verdicts based on explicit IF-THEN rules covering engine condition, transmission, exterior, interior, documentation, and seller behavior.
+RecycleDrive is a rule-based expert system designed to help buyers evaluate second-hand cars in the Pakistani market before making a purchase decision. It provides transparent, explainable verdicts based on explicit IF-THEN rules covering engine condition, transmission, exterior, interior, documentation, and seller behavior. https://recycle-drive.streamlit.app/
 
 ---
 
@@ -806,7 +806,7 @@ Expected: "Buy After Inspection" (insufficient information)
 https://github.com/Supl3x/Car-Expert-System
 
 **Live Streamlit App:**  
-[To be added after deployment]
+https://recycle-drive.streamlit.app/
 
 ---
 
